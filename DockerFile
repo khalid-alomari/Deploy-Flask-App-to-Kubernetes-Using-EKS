@@ -1,10 +1,16 @@
-# Dockerfile
+# Dockerfile image
 FROM python:stretch
 
+LABEL Author='Khalid'
+# /app is the new work directory now!
 COPY . /app
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+#Dependencies installation!
+RUN pip3 install --upgrade pip
+COPY ./requirements.txt /app/requirements.txt
+RUN pip3 install -r requirements.txt
 
+# We can add environment setup also!
 
 ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
