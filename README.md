@@ -1,4 +1,8 @@
-I will update this readme by the end of `May, 2020`.
+__Important:__ I will update this readme by the end of `May, 2020`.
+
+pycodestyle 100% done!
+
+End! clone on May 27, 2020
 
 # Deploying a Flask API
 
