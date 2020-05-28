@@ -1,6 +1,9 @@
 ---
 version: 0.2
-
+# The buildspec.yml tell CodeBuild to get the variable from the parameter store.
+env:
+  parameter-store:
+     JWT_SECRET: JWT_SECRET
 
 phases:
   install:
