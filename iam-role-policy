@@ -4,7 +4,7 @@
     {
       "Action": "ssm:GetParameters",
       "Effect": "Allow",
-      "Resource": "arn:aws:ssm:us-east-2:915924869483:parameter/CodeBuild/*"
+      "Resource": "arn:aws:ssm:us-west-2:915924869483:parameter/CodeBuild/*"
     }
   ]
 }
