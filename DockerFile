@@ -1,16 +1,49 @@
-# Dockerfile image
+# # Dockerfile image
+# FROM python:stretch
+
+# LABEL Author='Khalid'
+# # /app is the new work directory now!
+# COPY . /app
+# WORKDIR /app
+
+# #Dependencies installation!
+# RUN pip3 install --upgrade pip
+# COPY ./requirements.txt /app/requirements.txt
+# RUN pip3 install -r requirements.txt
+
+# # We can add environment setup also!
+
+# ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
+
+# FROM python:stretch
+
+# COPY . /app
+# WORKDIR /app
+
+# RUN pip3 install -r requirements.txt
+
+
+# ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
+
+# FROM python:stretch
+
+# COPY . /app
+# WORKDIR /app
+
+# RUN pip install --upgrade pip
+# RUN pip install -r requirements.txt
+
+# EXPOSE 8080
+
+# ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
+
 FROM python:stretch
+COPY . /examples
 
-LABEL Author='Khalid'
-# /app is the new work directory now!
-COPY . /app
-WORKDIR /app
+WORKDIR /examples
 
-#Dependencies installation!
-RUN pip3 install --upgrade pip
-COPY ./requirements.txt /app/requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install pytest==4.0.2
+RUN pip install -r requirements.txt
 
-# We can add environment setup also!
-
-ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
+ENTRYPOINT ["gunicorn", "-b", ":8080","main:APP"]
