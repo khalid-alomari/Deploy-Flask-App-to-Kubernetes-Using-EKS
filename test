@@ -6,10 +6,10 @@ eksctl create cluster --name simple-jwt-api --region=us-west-2 --zones=us-west-2
         {
             "Action": [
                 "s3:Get*",
-                "s3:List*"
+                 "s3:List*"
             ],
             "Effect": "Allow",
             "Resource": "*"
         }
     ]
-} 
+}
