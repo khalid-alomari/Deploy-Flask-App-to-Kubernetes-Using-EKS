@@ -1,4 +1,38 @@
-__Important:__ I will update this readme soon.
+EXTERNAL-IP = a98919b5a531944ccb0e3b83363c5670-2047888364.us-west-2.elb.amazonaws.com
+## Final test!
+```shell
+To https://github.com/khalido394/Deploy-Flask-App-to-Kubernetes-Using-EKS.git
+   1980402..966d3cd  master -> master
+khalid (master) FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS-master
+$ kubectl get nodes
+NAME                                           STATUS   ROLES    AGE   VERSION
+ip-192-168-57-90.us-west-2.compute.internal    Ready    <none>   18m   v1.16.8-eks-e16311
+ip-192-168-93-107.us-west-2.compute.internal   Ready    <none>   18m   v1.16.8-eks-e16311
+khalid (master) FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS-master
+$ kubectl get services simple-jwt-api -o wide
+NAME             TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE   SELECTOR
+simple-jwt-api   LoadBalancer   10.100.16.252   a98919b5a531944ccb0e3b83363c5670-2047888364.us-west-2.elb.amazonaws.com   80:32260/TCP   48s   app=simple-jwt-api
+khalid (master) FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS-master
+$ export URL="a98919b5a531944ccb0e3b83363c5670-2047888364.us-west-2.elb.amazonaws.com"
+khalid (master) FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS-master
+$ export TOKEN=`curl -d '{"email":"test@test.com","password":"test"}' -H "Content-Type: application/json" -X POST $URL/auth  | jq -r '.token'`
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   216  100   173  100    43   1720    427 --:--:-- --:--:-- --:--:--  1730
+khalid (master) FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS-master
+$ curl --request GET $URL:80/contents -H "Authorization: Bearer ${TOKEN}" | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    60  100    60    0     0    838      0 --:--:-- --:--:-- --:--:--   845
+{
+  "email": "test@test.com",
+  "exp": 1592166142,
+  "nbf": 1590956542
+}
+```
+
+----------
+__Important:__ _I will update this readme soon!_
 
 pycodestyle 100% done!
 
