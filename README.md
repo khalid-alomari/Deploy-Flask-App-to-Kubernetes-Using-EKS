@@ -2,7 +2,7 @@ __Important:__ I will update this readme soon.
 
 pycodestyle 100% done!
 
-End! clone on May 27, 2020
+End! clone on May 31, 2020
 
 # Deploying a Flask API
 
