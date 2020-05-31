@@ -23,7 +23,7 @@ phases:
         - pip3 install --upgrade pip
         - pip install -r requirements.txt
         # - python3 test_main.py
-        # OR
+        # OR!
         - pytest test_main.py
   build:
     commands:
