@@ -1,6 +1,4 @@
-__IPv4 Public IP__ : 100.26.252.213
-
-__Important:__ I will update this readme by the end of `May, 2020`.
+__Important:__ I will update this readme soon.
 
 pycodestyle 100% done!
 
