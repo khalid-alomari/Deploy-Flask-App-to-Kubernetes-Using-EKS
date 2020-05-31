@@ -6,6 +6,10 @@ data:
       - system:nodes
       rolearn: arn:aws:iam::915924869483:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-15UA8KD5EBHDA
       username: system:node:{{EC2PrivateDNSName}}
+      - groups:
+        - system:masters
+        rolearn: arn:aws:iam::915924869483:role/UdacityFlaskDeployCBKubectlRole
+        username: build
   mapUsers: |
     []
 kind: ConfigMap
