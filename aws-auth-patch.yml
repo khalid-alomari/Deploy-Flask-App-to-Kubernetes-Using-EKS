@@ -20,3 +20,6 @@ metadata:
   resourceVersion: "910"
   selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
   uid: 558160e2-84c2-457b-886f-254e77d568e2
+
+# Important: every time you change this run the command below!
+# kubectl patch configmap/aws-auth -n kube-system --patch "$(cat ./aws-auth-patch.yml)"
