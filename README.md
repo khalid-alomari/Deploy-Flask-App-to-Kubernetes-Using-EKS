@@ -1,4 +1,4 @@
-EXTERNAL-IP = a98919b5a531944ccb0e3b83363c5670-2047888364.us-west-2.elb.amazonaws.com
+EXTERNAL-IP = a98919b5a531944ccb0e3b83363c5670-2047888364.us-west-2.elb.amazonaws.com (Unconected now was just for testing!)
 ## Final test!
 ```shell
 To https://github.com/khalido394/Deploy-Flask-App-to-Kubernetes-Using-EKS.git
