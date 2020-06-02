@@ -34,7 +34,7 @@ $ curl --request GET $URL:80/contents -H "Authorization: Bearer ${TOKEN}" | jq
 ```
 
 ----------
-__Important:__ _I will update this readme soon!_
+__Important:__ _I will update this readme soon, So you can build it and deploy it by your own!_
 
 pycodestyle 100% done!
 
